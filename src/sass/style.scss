@@ -42,8 +42,10 @@ body {
 
 .r-col__right {
   grid-area: r-col__right;
+  display: flex;
+  flex-direction: column;
   overflow: auto;
-  padding: rem(180) rem(250) 0 rem(40);
+  padding: rem(100) rem(250) 0 rem(40);
 
   .r-login__header, form, .r-login__social {
     width: 23vw;
@@ -141,13 +143,20 @@ body {
 
   .r-login__social {
     text-align: center;
-    padding: 0 rem(10);
-    border-bottom: rem(1) solid $gray-80;
-    box-shadow: 0 rem(1) 0 0 rgba($white, 0.7); //переделать на спан или п
+    justify-content: flex-end;
+
+    h3 {
+      font-size: rem(16);
+      font-weight: normal;
+      padding-bottom: rem(10);
+      border-bottom: rem(1) solid $gray-80;
+      box-shadow: 0 rem(1) 0 0 rgba($white, 0.7);
+    }
 
     ul {
       display: flex;
-
+      justify-content: space-between;
+      padding: rem(10);
 
       li {
         height: rem(50);

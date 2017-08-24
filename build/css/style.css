@@ -30,8 +30,10 @@ body {
 
 .r-col__right {
   grid-area: r-col__right;
+  display: flex;
+  flex-direction: column;
   overflow: auto;
-  padding: 11.25rem 15.625rem 0 2.5rem; }
+  padding: 6.25rem 15.625rem 0 2.5rem; }
   .r-col__right .r-login__header, .r-col__right form, .r-col__right .r-login__social {
     width: 23vw; }
   .r-col__right .r-login__header {
@@ -88,11 +90,17 @@ body {
       font-size: 0.75rem; }
   .r-col__right .r-login__social {
     text-align: center;
-    padding: 0 0.625rem;
-    border-bottom: 0.0625rem solid #cccccc;
-    box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
+    justify-content: flex-end; }
+    .r-col__right .r-login__social h3 {
+      font-size: 1rem;
+      font-weight: normal;
+      padding-bottom: 0.625rem;
+      border-bottom: 0.0625rem solid #cccccc;
+      box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
     .r-col__right .r-login__social ul {
-      display: flex; }
+      display: flex;
+      justify-content: space-between;
+      padding: 0.625rem; }
       .r-col__right .r-login__social ul li {
         height: 3.125rem;
         width: 3.125rem;
