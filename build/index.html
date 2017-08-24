@@ -25,28 +25,42 @@
     </div>
 </section>
 <section class="r-col__right">
-    <h2>Присоединяйтесь к нам</h2>
-    <p>это займет пару секунд</p>
-    <form action="#" name="registration" class="active">
-        <div class="r-registration__email">
+    <div class="r-login__header">
+        <h2>Присоединяйтесь к нам</h2>
+        <p>это займет пару секунд</p>
+    </div>
+    <form action="#" name="registration" class="r-login__form active">
+        <div class="r-form__email">
             <input type="email" placeholder="Введите Ваш e-mail">
         </div>
-        <div class="r-registration__password">
+        <div class="r-form__password">
             <input type="password" placeholder="Выберите пароль">
-            <a href="#"><img src="#" alt="show"></a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.97 59.02" width="32px" height="19px">
+                    <g>
+                        <g>
+                            <path class="r-password__show"
+                                  d="M100,12.44C35.51-22.13-16.57,23.23,4.92,52.81,4.54,17.44,44-8,100,12.44ZM47.69,18.65A20.39,20.39,0,0,0,27.1,38.84a20.6,20.6,0,0,0,41.19,0A20.39,20.39,0,0,0,47.69,18.65ZM46.11,46.6a9.32,9.32,0,1,1,9.5-9.32A9.41,9.41,0,0,1,46.11,46.6Z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </a>
         </div>
-        <div class="r-registration__agreement">
+        <div class="r-form__agreement">
             <input type="checkbox" id="user-agreement">
             <label for="user-agreement">Вы принимаете <a href="#">Пользовательское Соглашение</a></label>
         </div>
-        <input type="submit" class="button-green" value="Зарегистрироваться">
+        <div class="r-form__btn">
+            <input type="submit" class="button-green" value="Зарегистрироваться">
+        </div>
+        <div class="r-form__forgot">
+            <a href="#" class="r-login">Войти</a> или
+            <a href="#" class="r-forgot">Забыли пароль?</a>
+        </div>
     </form>
-    <div class="r-login-reg-forgot">
-        <a href="#" class="r-login">Войти</a> или
-        <a href="#" class="r-forgot">Забыли пароль?</a>
-    </div>
     <div class="r-login__social">
-        <p>Или используйте одну из своих учетных записей:</p>
+        Или используйте одну из своих учетных записей:
         <ul>
             <li>
                 <a href="#">

@@ -42,63 +42,144 @@ body {
 
 .r-col__right {
   grid-area: r-col__right;
-  overflow: hidden;
-  padding: rem(30) rem(250) 0 rem(40);
+  overflow: auto;
+  padding: rem(180) rem(250) 0 rem(40);
 
-  input[type=checkbox] {
-    display: none;
+  .r-login__header, form, .r-login__social {
+    width: 23vw;
   }
 
-  label {
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    padding-left: 20px;
+  .r-login__header {
+    padding: 0 rem(10) rem(10) rem(10);
+    border-bottom: rem(1) solid $gray-80;
+    box-shadow: 0 rem(1) 0 0 rgba($white, 0.7);
 
-    &:before {
-      content: ' ';
-      width: rem(16);
-      height: rem(16);
-      position: absolute;
-      left: 0;
-      background: url("../img/sprite_checkbox.png") no-repeat;
+    h2 {
+      //font-size: rem(26);
+      font-weight: normal;
+    }
+
+    p {
+      font-size: rem(14);
     }
   }
 
-  input[type=checkbox]:checked + label:before {
-    background-position: 0 -26px;
+  form {
+    padding: rem(20) rem(10);
+    margin-bottom: rem(30);
+
+    input[type=email], input[type=password] {
+      width: 100%;
+    }
+
+    .r-form__email {
+      margin-bottom: rem(15);
+    }
+
+    .r-form__password {
+      position: relative;
+      margin-bottom: rem(10);
+
+      input[type=password] {
+      }
+
+      a {
+        position: absolute;
+        top: rem(7);
+        right: rem(10);
+
+        .r-password__show {
+          fill: $gray-80;
+
+          &:hover {
+            fill: $gray-50;
+          }
+        }
+      }
+    }
+
+    .r-form__agreement {
+      font-size: rem(12);
+      margin-bottom: rem(15);
+
+      input[type=checkbox] {
+        display: none;
+      }
+
+      input[type=checkbox]:checked + label:before {
+        background-position: 0 -26px;
+      }
+
+      label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: rem(20);
+        line-height: rem(18);
+
+        &:before {
+          content: ' ';
+          width: rem(16);
+          height: rem(16);
+          position: absolute;
+          left: 0;
+          background: url("../img/sprite_checkbox.png") no-repeat;
+        }
+      }
+    }
+
+    .r-form__btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: rem(25);
+    }
+
+    .r-form__forgot {
+      font-size: rem(12);
+    }
   }
 
-  .r-social__ico {
-    fill: $gray-50;
-  }
+  .r-login__social {
+    text-align: center;
+    padding: 0 rem(10);
+    border-bottom: rem(1) solid $gray-80;
+    box-shadow: 0 rem(1) 0 0 rgba($white, 0.7); //переделать на спан или п
 
+    ul {
+      display: flex;
+
+
+      li {
+        height: rem(50);
+        width: rem(50);
+        background-color: $white;
+        border: rem(5) solid $gray-80;
+        box-shadow: inset 0 rem(2) 0 0 rgba($black, 0.1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: $green;
+          box-shadow: inset 0 rem(3) rem(1) 0 rgba($green-dark, 0.5);
+
+          .r-social__ico {
+            fill: $white;
+          }
+        }
+
+        .r-social__ico {
+          fill: $gray-50;
+        }
+      }
+    }
+
+    p {
+      font-size: rem(12);
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .r-footer {
   grid-area: r-footer;

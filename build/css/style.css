@@ -30,26 +30,88 @@ body {
 
 .r-col__right {
   grid-area: r-col__right;
-  overflow: hidden;
-  padding: 1.875rem 15.625rem 0 2.5rem; }
-  .r-col__right input[type=checkbox] {
-    display: none; }
-  .r-col__right label {
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    padding-left: 20px; }
-    .r-col__right label:before {
-      content: ' ';
-      width: 1rem;
-      height: 1rem;
-      position: absolute;
-      left: 0;
-      background: url("../img/sprite_checkbox.png") no-repeat; }
-  .r-col__right input[type=checkbox]:checked + label:before {
-    background-position: 0 -26px; }
-  .r-col__right .r-social__ico {
-    fill: gray; }
+  overflow: auto;
+  padding: 11.25rem 15.625rem 0 2.5rem; }
+  .r-col__right .r-login__header, .r-col__right form, .r-col__right .r-login__social {
+    width: 23vw; }
+  .r-col__right .r-login__header {
+    padding: 0 0.625rem 0.625rem 0.625rem;
+    border-bottom: 0.0625rem solid #cccccc;
+    box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
+    .r-col__right .r-login__header h2 {
+      font-weight: normal; }
+    .r-col__right .r-login__header p {
+      font-size: 0.875rem; }
+  .r-col__right form {
+    padding: 1.25rem 0.625rem;
+    margin-bottom: 1.875rem; }
+    .r-col__right form input[type=email], .r-col__right form input[type=password] {
+      width: 100%; }
+    .r-col__right form .r-form__email {
+      margin-bottom: 0.9375rem; }
+    .r-col__right form .r-form__password {
+      position: relative;
+      margin-bottom: 0.625rem; }
+      .r-col__right form .r-form__password a {
+        position: absolute;
+        top: 0.4375rem;
+        right: 0.625rem; }
+        .r-col__right form .r-form__password a .r-password__show {
+          fill: #cccccc; }
+          .r-col__right form .r-form__password a .r-password__show:hover {
+            fill: gray; }
+    .r-col__right form .r-form__agreement {
+      font-size: 0.75rem;
+      margin-bottom: 0.9375rem; }
+      .r-col__right form .r-form__agreement input[type=checkbox] {
+        display: none; }
+      .r-col__right form .r-form__agreement input[type=checkbox]:checked + label:before {
+        background-position: 0 -26px; }
+      .r-col__right form .r-form__agreement label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 1.25rem;
+        line-height: 1.125rem; }
+        .r-col__right form .r-form__agreement label:before {
+          content: ' ';
+          width: 1rem;
+          height: 1rem;
+          position: absolute;
+          left: 0;
+          background: url("../img/sprite_checkbox.png") no-repeat; }
+    .r-col__right form .r-form__btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.5625rem; }
+    .r-col__right form .r-form__forgot {
+      font-size: 0.75rem; }
+  .r-col__right .r-login__social {
+    text-align: center;
+    padding: 0 0.625rem;
+    border-bottom: 0.0625rem solid #cccccc;
+    box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
+    .r-col__right .r-login__social ul {
+      display: flex; }
+      .r-col__right .r-login__social ul li {
+        height: 3.125rem;
+        width: 3.125rem;
+        background-color: #fff;
+        border: 0.3125rem solid #cccccc;
+        box-shadow: inset 0 0.125rem 0 0 rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .r-col__right .r-login__social ul li:hover {
+          background-color: #1faa00;
+          box-shadow: inset 0 0.1875rem 0.0625rem 0 rgba(24, 133, 0, 0.5); }
+          .r-col__right .r-login__social ul li:hover .r-social__ico {
+            fill: #fff; }
+        .r-col__right .r-login__social ul li .r-social__ico {
+          fill: gray; }
+    .r-col__right .r-login__social p {
+      font-size: 0.75rem; }
 
 .r-footer {
   grid-area: r-footer;
