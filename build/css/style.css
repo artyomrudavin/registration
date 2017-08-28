@@ -110,6 +110,7 @@ body {
         .r-col__right .r-login__form form .r-form__forgot a:hover {
           text-decoration: underline; }
       .r-col__right .r-login__form form .r-form__tooltip {
+        display: none;
         position: absolute;
         left: 0.75rem;
         top: -2.5rem;
