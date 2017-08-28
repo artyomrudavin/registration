@@ -65,6 +65,7 @@ body {
       .r-col__right .r-login__form form input[type=email], .r-col__right .r-login__form form input[type=password] {
         width: 100%; }
       .r-col__right .r-login__form form .r-form__email {
+        position: relative;
         margin-bottom: 0.9375rem; }
       .r-col__right .r-login__form form .r-form__password {
         position: relative;
@@ -78,6 +79,7 @@ body {
             .r-col__right .r-login__form form .r-form__password a .r-password__show:hover {
               fill: gray; }
       .r-col__right .r-login__form form .r-form__agreement {
+        position: relative;
         font-size: 0.75rem;
         margin-bottom: 0.9375rem; }
         .r-col__right .r-login__form form .r-form__agreement input[type=checkbox] {
@@ -107,6 +109,15 @@ body {
         font-size: 0.75rem; }
         .r-col__right .r-login__form form .r-form__forgot a:hover {
           text-decoration: underline; }
+      .r-col__right .r-login__form form .r-form__tooltip {
+        position: absolute;
+        left: 0.75rem;
+        top: -2.5rem;
+        color: #f25520;
+        font-size: 0.875rem;
+        padding: 0.625rem;
+        background-color: #fef6f4;
+        box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2); }
   .r-col__right .r-login__social {
     width: 23.75vw;
     text-align: center;
