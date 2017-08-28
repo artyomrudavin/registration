@@ -12,19 +12,26 @@ body {
   grid-area: r-col__left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
-  padding: 1.875rem 2.5rem 0 15.625rem; }
-  .r-col__left .r-logo {
-    padding-bottom: 1.875rem; }
-  .r-col__left h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: normal; }
-    .r-col__left h2 span {
-      font-weight: bold;
-      color: #188500; }
-  .r-col__left img {
+  padding-right: 2.5rem; }
+  .r-col__left .r-logo, .r-col__left .r-slogan, .r-col__left .r-picture {
+    display: flex;
+    justify-content: center;
+    width: 23.75vw;
+    box-sizing: border-box; }
+  .r-col__left .r-slogan {
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem; }
+    .r-col__left .r-slogan h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: normal; }
+      .r-col__left .r-slogan h2 span {
+        font-weight: bold;
+        color: #188500; }
+  .r-col__left .r-logo img, .r-col__left .r-picture img {
     width: 100%;
     height: 100%; }
 
@@ -32,76 +39,90 @@ body {
   grid-area: r-col__right;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   overflow: auto;
-  padding: 6.25rem 15.625rem 0 2.5rem; }
-  .r-col__right .r-login__header, .r-col__right form, .r-col__right .r-login__social {
-    width: 23vw; }
+  padding-left: 2.5rem; }
+  .r-col__right .r-login__header, .r-col__right .r-login__form {
+    width: 23.75vw;
+    box-sizing: border-box;
+    padding: 0 0.625rem; }
   .r-col__right .r-login__header {
-    padding: 0 0.625rem 0.625rem 0.625rem;
+    padding-bottom: 0.625rem;
     border-bottom: 0.0625rem solid #cccccc;
     box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
     .r-col__right .r-login__header h2 {
       font-weight: normal; }
     .r-col__right .r-login__header p {
       font-size: 0.875rem; }
-  .r-col__right form {
-    padding: 1.25rem 0.625rem;
-    margin-bottom: 1.875rem; }
-    .r-col__right form input[type=email], .r-col__right form input[type=password] {
-      width: 100%; }
-    .r-col__right form .r-form__email {
-      margin-bottom: 0.9375rem; }
-    .r-col__right form .r-form__password {
-      position: relative;
-      margin-bottom: 0.625rem; }
-      .r-col__right form .r-form__password a {
-        position: absolute;
-        top: 0.4375rem;
-        right: 0.625rem; }
-        .r-col__right form .r-form__password a .r-password__show {
-          fill: #cccccc; }
-          .r-col__right form .r-form__password a .r-password__show:hover {
-            fill: gray; }
-    .r-col__right form .r-form__agreement {
-      font-size: 0.75rem;
-      margin-bottom: 0.9375rem; }
-      .r-col__right form .r-form__agreement input[type=checkbox] {
-        display: none; }
-      .r-col__right form .r-form__agreement input[type=checkbox]:checked + label:before {
-        background-position: 0 -26px; }
-      .r-col__right form .r-form__agreement label {
-        display: inline-block;
-        cursor: pointer;
+  .r-col__right .r-login__form {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    flex: 0 1 39vh; }
+    .r-col__right .r-login__form form {
+      display: none; }
+      .r-col__right .r-login__form form.active {
+        display: block; }
+      .r-col__right .r-login__form form input[type=email], .r-col__right .r-login__form form input[type=password] {
+        width: 100%; }
+      .r-col__right .r-login__form form .r-form__email {
+        margin-bottom: 0.9375rem; }
+      .r-col__right .r-login__form form .r-form__password {
         position: relative;
-        padding-left: 1.25rem;
-        line-height: 1.125rem; }
-        .r-col__right form .r-form__agreement label:before {
-          content: ' ';
-          width: 1rem;
-          height: 1rem;
+        margin-bottom: 0.625rem; }
+        .r-col__right .r-login__form form .r-form__password a {
           position: absolute;
-          left: 0;
-          background: url("../img/sprite_checkbox.png") no-repeat; }
-    .r-col__right form .r-form__btn {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 1.5625rem; }
-    .r-col__right form .r-form__forgot {
-      font-size: 0.75rem; }
+          top: 0.4375rem;
+          right: 0.625rem; }
+          .r-col__right .r-login__form form .r-form__password a .r-password__show {
+            fill: #cccccc; }
+            .r-col__right .r-login__form form .r-form__password a .r-password__show:hover {
+              fill: gray; }
+      .r-col__right .r-login__form form .r-form__agreement {
+        font-size: 0.75rem;
+        margin-bottom: 0.9375rem; }
+        .r-col__right .r-login__form form .r-form__agreement input[type=checkbox] {
+          display: none; }
+        .r-col__right .r-login__form form .r-form__agreement input[type=checkbox]:checked + label:before {
+          background-position: 0 -26px; }
+        .r-col__right .r-login__form form .r-form__agreement label {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding-left: 1.25rem;
+          line-height: 1.125rem; }
+          .r-col__right .r-login__form form .r-form__agreement label:before {
+            content: ' ';
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            left: 0;
+            background: url("../img/sprite_checkbox.png") no-repeat; }
+          .r-col__right .r-login__form form .r-form__agreement label a:hover {
+            text-decoration: underline; }
+      .r-col__right .r-login__form form .r-form__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.5625rem; }
+      .r-col__right .r-login__form form .r-form__forgot {
+        font-size: 0.75rem; }
+        .r-col__right .r-login__form form .r-form__forgot a:hover {
+          text-decoration: underline; }
   .r-col__right .r-login__social {
+    width: 23.75vw;
     text-align: center;
-    justify-content: flex-end; }
+    box-sizing: border-box; }
     .r-col__right .r-login__social h3 {
       font-size: 1rem;
       font-weight: normal;
-      padding-bottom: 0.625rem;
+      padding: 0 0.625rem 0.625rem 0.625rem;
       border-bottom: 0.0625rem solid #cccccc;
       box-shadow: 0 0.0625rem 0 0 rgba(255, 255, 255, 0.7); }
     .r-col__right .r-login__social ul {
       display: flex;
       justify-content: space-between;
-      padding: 0.625rem; }
+      padding: 1.25rem 0.9375rem; }
       .r-col__right .r-login__social ul li {
+        flex: 0 0 auto;
         height: 3.125rem;
         width: 3.125rem;
         background-color: #fff;
