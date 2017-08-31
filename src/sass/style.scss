@@ -90,11 +90,11 @@ body {
         display: block;
       }
 
-      input[type=email], input[type=password] {
+      input[type=email], input[type=text], input[type=password] {
         width: 100%;
       }
 
-      .r-form__email {
+      .r-form__email, .r-form__login {
         position: relative;
         margin-bottom: rem(15);
       }
@@ -157,6 +157,10 @@ body {
         display: flex;
         justify-content: flex-end;
         margin-bottom: rem(25);
+
+        input[type=submit] {
+          flex: 0 1 rem(170);
+        }
       }
 
       .r-form__forgot {

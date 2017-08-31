@@ -62,9 +62,9 @@ body {
       display: none; }
       .r-col__right .r-login__form form.active {
         display: block; }
-      .r-col__right .r-login__form form input[type=email], .r-col__right .r-login__form form input[type=password] {
+      .r-col__right .r-login__form form input[type=email], .r-col__right .r-login__form form input[type=text], .r-col__right .r-login__form form input[type=password] {
         width: 100%; }
-      .r-col__right .r-login__form form .r-form__email {
+      .r-col__right .r-login__form form .r-form__email, .r-col__right .r-login__form form .r-form__login {
         position: relative;
         margin-bottom: 0.9375rem; }
       .r-col__right .r-login__form form .r-form__password {
@@ -105,6 +105,8 @@ body {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 1.5625rem; }
+        .r-col__right .r-login__form form .r-form__btn input[type=submit] {
+          flex: 0 1 10.625rem; }
       .r-col__right .r-login__form form .r-form__forgot {
         font-size: 0.75rem; }
         .r-col__right .r-login__form form .r-form__forgot a:hover {
